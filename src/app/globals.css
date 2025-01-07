@@ -2,20 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  @font-face {
+    font-family: "YekanBakh";
+    src: url("/assets/fonts/YekanBakhFaNum-Thin.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @font-face {
+    font-family: "YekanBakh";
+    src: url("/assets/fonts/YekanBakhFaNum-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "YekanBakh";
+    src: url("/assets/fonts/YekanBakhFaNum-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "YekanBakh";
+    src: url("/assets/fonts/YekanBakhFaNum-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "YekanBakh";
+    src: url("/assets/fonts/YekanBakhFaNum-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "YekanBakh";
+    src: url("/assets/fonts/YekanBakhFaNum-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "YekanBakh";
+    src: url("/assets/fonts/YekanBakhFaNum-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "YekanBakh";
+    src: url("/assets/fonts/YekanBakhFaNum-ExtraBlack.woff2") format("woff2");
+    font-weight: 950;
+    font-style: normal;
+    font-display: swap;
+  }
 }
