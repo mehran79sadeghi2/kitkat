@@ -1,0 +1,198 @@
+.button {
+  font-size: var(--font-size-label-lg);
+  line-height: var(--line-height-label-lg);
+  border-radius: 99999px;
+  font-weight: 400;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  transition:
+    background-color 0.2s,
+    box-shadow 0.2s;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: relative;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.stateLayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s;
+  filter: blur(3px);
+  pointer-events: none;
+}
+
+/* colorSchemes */
+.button-colorScheme-primary {
+  --color-colorScheme: var(--color-primary);
+  --color-on-colorScheme: var(--color-on-primary);
+  --colorbase-on-colorScheme: var(--colorbase-on-primary);
+  --colorbase-colorScheme: var(--colorbase-primary);
+}
+
+.button-colorScheme-secondary {
+  --color-colorScheme: var(--color-secondary);
+  --color-on-colorScheme: var(--color-on-secondary);
+  --colorbase-on-colorScheme: var(--colorbase-on-secondary);
+  --colorbase-colorScheme: var(--colorbase-secondary);
+}
+
+.button-colorScheme-tertiary {
+  --color-colorScheme: var(--color-tertiary);
+  --color-on-colorScheme: var(--color-on-tertiary);
+  --colorbase-on-colorScheme: var(--colorbase-on-tertiary);
+  --colorbase-colorScheme: var(--colorbase-tertiary);
+}
+
+/* Filled Buttons */
+.button-variant-filled {
+  --icon-fill: var(--color-on-colorScheme);
+  color: var(--color-on-colorScheme);
+  background-color: var(--color-colorScheme);
+  border: none;
+}
+
+.button-variant-filled > .stateLayer-variant-filled {
+  background-color: transparent;
+}
+
+.button-variant-filled:focus > .stateLayer-variant-filled {
+  background-color: rgba(var(--colorbase-on-colorScheme), 0.12);
+}
+
+.button-variant-filled:hover > .stateLayer-variant-filled {
+  background-color: rgba(var(--colorbase-on-colorScheme), 0.08);
+}
+
+.button-variant-filled:active > .stateLayer-variant-filled {
+  background-color: rgba(var(--colorbase-on-colorScheme), 0.12);
+}
+
+.button-variant-filled:disabled {
+  --icon-fill: rgba(var(--colorbase-on-surface), 0.38);
+  color: rgba(var(--colorbase-on-surface), 0.38);
+  background-color: transparent;
+}
+
+.button-variant-filled:disabled > .stateLayer-variant-filled {
+  background-color: rgba(var(--colorbase-on-surface), 0.12);
+}
+
+/* Outlined Buttons */
+.button-variant-outlined {
+  --icon-fill: var(--color-colorScheme);
+  color: var(--color-colorScheme);
+  background-color: transparent;
+  border: 1px solid var(--color-outline);
+}
+
+.button-variant-outlined > .stateLayer-variant-outlined {
+  background-color: transparent;
+}
+
+.button-variant-outlined:focus > .stateLayer-variant-outlined {
+  background-color: rgba(var(--colorbase-colorScheme), 0.12);
+}
+
+.button-variant-outlined:hover > .stateLayer-variant-outlined {
+  background-color: rgba(var(--colorbase-colorScheme), 0.08);
+}
+
+.button-variant-outlined:active > .stateLayer-variant-outlined {
+  background-color: rgba(var(--colorbase-colorScheme), 0.12);
+}
+
+.button-variant-outlined:disabled {
+  --icon-fill: rgba(var(--colorbase-on-surface), 0.38);
+  color: rgba(var(--colorbase-on-surface), 0.38);
+  background-color: transparent;
+}
+
+.button-variant-outlined:disabled > .stateLayer-variant-outlined {
+  background-color: transparent;
+}
+
+/* Text Buttons */
+.button-variant-text {
+  --icon-fill: var(--color-colorScheme);
+  color: var(--color-colorScheme);
+  background-color: transparent;
+  border: none;
+}
+
+.button-variant-text > .stateLayer-variant-text {
+  background-color: transparent;
+}
+
+.button-variant-text:focus > .stateLayer-variant-text {
+  background-color: rgba(var(--colorbase-colorScheme), 0.12);
+}
+
+.button-variant-text:hover > .stateLayer-variant-text {
+  background-color: rgba(var(--colorbase-colorScheme), 0.08);
+}
+
+.button-variant-text:active > .stateLayer-variant-text {
+  background-color: rgba(var(--colorbase-colorScheme), 0.12);
+}
+
+.button-variant-text:disabled {
+  background-color: transparent;
+  color: rgba(var(--colorbase-on-surface), 0.38);
+}
+
+.button-variant-text:disabled > .stateLayer-variant-text {
+  background-color: transparent;
+}
+
+/* Elevated Buttons */
+.button-variant-elevated {
+  --icon-fill: var(--color-colorScheme);
+  color: var(--color-colorScheme);
+  background-color: var(--color-surface-container-low);
+  border: none;
+  box-shadow: var(--box-shadow-1);
+}
+
+.button-variant-elevated > .stateLayer-variant-elevated {
+  background-color: transparent;
+}
+
+.button-variant-elevated:focus > .stateLayer-variant-elevated {
+  background-color: rgba(var(--colorbase-colorScheme), 0.12);
+}
+
+.button-variant-elevated:hover {
+  box-shadow: var(--box-shadow-2);
+}
+
+.button-variant-elevated:hover > .stateLayer-variant-elevated {
+  background-color: rgba(var(--colorbase-colorScheme), 0.08);
+}
+
+.button-variant-elevated:active > .stateLayer-variant-elevated {
+  background-color: rgba(var(--colorbase-colorScheme), 0.12);
+}
+
+.button-variant-elevated:disabled {
+  --icon-fill: rgba(var(--colorbase-on-surface), 0.38);
+  color: rgba(var(--colorbase-on-surface), 0.38);
+  background-color: rgba(var(--colorbase-on-surface), 0.12);
+  box-shadow: none;
+}
+
+.button-variant-elevated:disabled > .stateLayer-variant-elevated {
+  background-color: transparent;
+}

@@ -1,0 +1,7 @@
+.colorScheme-primary {
+  --icon-fill: var(--color-primary);
+}
+
+.colorScheme-secondary {
+  --icon-fill: var(--color-secondary);
+}
