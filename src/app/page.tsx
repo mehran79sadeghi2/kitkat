@@ -272,7 +272,8 @@ export default function Home() {
           label="شماره تلفن"
           placeholder="وارد کنید..."
           helperText="سلام مهران"
-          // error
+          colorScheme="tertiary"
+          error
           // disabled
         />
         <TextField
@@ -282,8 +283,9 @@ export default function Home() {
           label="شماره تلفن"
           placeholder="وارد کنید..."
           helperText="سلام مهران"
-          error
-          disabled
+          colorScheme="secondary"
+          // error
+          // disabled
         />
       </Form.Root>
     </div>

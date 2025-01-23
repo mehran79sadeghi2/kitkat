@@ -7,6 +7,7 @@ import styles from './styles.module.css';
 
 interface PropTypes extends Form.FormControlProps {
     variant?: "filled" | 'outlined';
+    colorScheme?: 'primary' | 'secondary' | 'tertiary';
     startAdornment?: ReactNode | null;
     endAdornment?: ReactNode | null;
     label?: string;
@@ -18,6 +19,7 @@ const TextField = forwardRef<HTMLInputElement, PropTypes>((props, ref) => {
     const {
         value,
         variant = 'outlined',
+        colorScheme = 'primary',
         startAdornment = null,
         endAdornment = null,
         label,
@@ -32,7 +34,11 @@ const TextField = forwardRef<HTMLInputElement, PropTypes>((props, ref) => {
     return (
         <Form.Field name="hello" asChild>
             <div
-                className={classNames(styles.root, styles[`root-variant-${variant}`])}
+                className={classNames(
+                    styles.root,
+                    styles[`root-variant-${variant}`],
+                    styles[`textField-colorScheme-${colorScheme}`]
+                )}
                 data-has-label={!!label}
                 data-has-start-adornment={!!startAdornment}
                 data-has-end-adornment={!!endAdornment}
