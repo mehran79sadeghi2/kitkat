@@ -2,4 +2,12 @@
 @import url("./colors.css");
 @import url("./box-shadows.css");
 @import url("./typography.css");
-@import url("./custom-variables.css")
+@import url("./custom-variables.css");
+
+body {
+  background-color: var(--color-surface-container-low);
+}
+
+* {
+  box-sizing: border-box;
+}

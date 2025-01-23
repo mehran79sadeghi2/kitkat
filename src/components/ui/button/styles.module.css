@@ -11,8 +11,8 @@
     box-shadow 0.2s;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-inline-end: 1.5rem;
+  padding-inline-start: 1.5rem;
   position: relative;
   gap: 0.5rem;
   flex-wrap: wrap;
@@ -21,6 +21,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.button:focus-visible {
+  outline: none;
 }
 
 .stateLayer {
@@ -68,7 +72,7 @@
   background-color: transparent;
 }
 
-.button-variant-filled:focus > .stateLayer-variant-filled {
+.button-variant-filled:focus-visible > .stateLayer-variant-filled {
   background-color: rgba(var(--colorbase-on-colorScheme), 0.12);
 }
 
@@ -102,7 +106,7 @@
   background-color: transparent;
 }
 
-.button-variant-outlined:focus > .stateLayer-variant-outlined {
+.button-variant-outlined:focus-visible > .stateLayer-variant-outlined {
   background-color: rgba(var(--colorbase-colorScheme), 0.12);
 }
 
@@ -136,7 +140,7 @@
   background-color: transparent;
 }
 
-.button-variant-text:focus > .stateLayer-variant-text {
+.button-variant-text:focus-visible > .stateLayer-variant-text {
   background-color: rgba(var(--colorbase-colorScheme), 0.12);
 }
 
@@ -170,7 +174,7 @@
   background-color: transparent;
 }
 
-.button-variant-elevated:focus > .stateLayer-variant-elevated {
+.button-variant-elevated:focus-visible > .stateLayer-variant-elevated {
   background-color: rgba(var(--colorbase-colorScheme), 0.12);
 }
 

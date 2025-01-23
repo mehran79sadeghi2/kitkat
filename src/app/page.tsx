@@ -2,6 +2,8 @@
 
 import Button from "@/components/ui/button";
 import PlusRoundedIcon from "@/components/ui/icon/plus-rounded";
+import TextField from "@/components/ui/textField";
+import * as Form from "@radix-ui/react-form";
 
 export default function Home() {
   return (
@@ -42,209 +44,209 @@ export default function Home() {
       <div style={{ marginBottom: '20px', gap: '8px', display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         <Button>
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button disabled>
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button variant="outlined">
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button variant="outlined" disabled>
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button variant="text">
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button variant="text" disabled>
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button variant="elevated">
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button variant="elevated" disabled>
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
       </div>
 
       <div style={{ marginBottom: '20px', gap: '8px', display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         <Button colorScheme="secondary">
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="secondary" disabled>
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="secondary" variant="outlined">
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="secondary" variant="outlined" disabled>
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="secondary" variant="text">
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="secondary" variant="text" disabled>
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="secondary" variant="elevated">
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="secondary" variant="elevated" disabled>
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
       </div>
 
       <div style={{ marginBottom: '20px', gap: '8px', display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         <Button colorScheme="tertiary">
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="tertiary" disabled>
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="tertiary" variant="outlined">
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="tertiary" variant="outlined" disabled>
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="tertiary" variant="text">
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="tertiary" variant="text" disabled>
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="tertiary" variant="elevated">
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
         <Button colorScheme="tertiary" variant="elevated" disabled>
           <PlusRoundedIcon />
-          <span>سلام مهران</span>
+          سلام مهران
         </Button>
       </div>
 
       <div style={{ marginBottom: '20px', gap: '8px', display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         <Button>
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button disabled>
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button variant="outlined">
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button variant="outlined" disabled>
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button variant="text">
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button variant="text" disabled>
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button variant="elevated">
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button variant="elevated" disabled>
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
       </div>
 
       <div style={{ marginBottom: '20px', gap: '8px', display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         <Button colorScheme="secondary">
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="secondary" disabled>
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="secondary" variant="outlined">
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="secondary" variant="outlined" disabled>
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="secondary" variant="text">
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="secondary" variant="text" disabled>
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="secondary" variant="elevated">
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="secondary" variant="elevated" disabled>
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
       </div>
 
       <div style={{ marginBottom: '20px', gap: '8px', display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         <Button colorScheme="tertiary">
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="tertiary" disabled>
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="tertiary" variant="outlined">
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="tertiary" variant="outlined" disabled>
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="tertiary" variant="text">
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="tertiary" variant="text" disabled>
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="tertiary" variant="elevated">
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
         <Button colorScheme="tertiary" variant="elevated" disabled>
-          <span>سلام مهران</span>
+          سلام مهران
           <PlusRoundedIcon />
         </Button>
       </div>
@@ -257,12 +259,33 @@ export default function Home() {
         <PlusRoundedIcon colorScheme="tertiary" />
         <PlusRoundedIcon width={60} height={60} />
       </div>
+      <Form.Root style={{
+        display: 'flex',
+        flexDirection: 'column',
+        marginBottom: '100px',
+        gap: '20px'
+      }}>
+        <TextField
+          variant="filled"
+          startAdornment={<PlusRoundedIcon />}
+          endAdornment={<PlusRoundedIcon />}
+          label="شماره تلفن"
+          placeholder="وارد کنید..."
+          helperText="سلام مهران"
+          // error
+          // disabled
+        />
+        <TextField
+          variant="outlined"
+          startAdornment={<PlusRoundedIcon />}
+          endAdornment={<PlusRoundedIcon />}
+          label="شماره تلفن"
+          placeholder="وارد کنید..."
+          helperText="سلام مهران"
+          error
+          disabled
+        />
+      </Form.Root>
     </div>
   );
 }
-
-
-
-
-{/* <PlusRoundedIcon />
-<span>سلام مهران</span> */}

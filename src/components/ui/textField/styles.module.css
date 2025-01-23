@@ -1,0 +1,261 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.textFieldContainer {
+  height: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-inline-start: 16px;
+  padding-inline-end: 16px;
+  position: relative;
+}
+
+.stateLayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: background-color 0.2s;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.inputContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: transparent;
+  cursor: text;
+}
+
+.input {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: var(--font-size-body-lg);
+  line-height: var(--line-height-body-lg);
+  transition: padding 0.2s;
+  padding-top: 0;
+  color: var(--color-on-surface);
+  font-weight: 400;
+  caret-color: var(--color-primary);
+}
+
+.bottomBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--color-on-surface-variant);
+  transition:
+    height 0.1s,
+    background-color 0.2s;
+}
+
+.label {
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body-sm);
+  font-weight: 600;
+  transition: color 0.3s;
+  user-select: none;
+  pointer-events: none;
+}
+
+.helperText {
+  font-size: var(--font-size-body-sm);
+  line-height: var(--line-height-body-sm);
+  margin-top: 0.25rem;
+  color: var(--color-on-surface-variant);
+  transition: color 0.2s;
+}
+
+.root[data-has-start-adornment="true"] > .textFieldContainer {
+  padding-inline-start: 8px;
+}
+
+.root[data-has-end-adornment="true"] > .textFieldContainer {
+  padding-inline-end: 8px;
+}
+
+.input::placeholder {
+  color: var(--color-on-surface-variant);
+  user-select: none;
+}
+.root:focus-within .bottomBar {
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+.root[data-is-disabled="true"] .inputContainer {
+  cursor: default;
+}
+
+/* Filled Variant */
+.root-variant-filled {
+  --icon-fill: var(--color-on-surface-variant);
+}
+
+.root-variant-filled > .textFieldContainer {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  background-color: var(--color-surface-container-highest);
+  overflow: hidden;
+}
+
+.root-variant-filled .label {
+  margin-bottom: 4px;
+  color: var(--color-on-surface-variant);
+}
+
+.root-variant-filled .textFieldContainer:hover .stateLayer {
+  background-color: rgba(var(--colorbase-on-surface), 0.08);
+}
+
+.root-variant-filled:focus-within .stateLayer {
+  background-color: rgba(var(--colorbase-on-surface), 0.08);
+}
+
+.root-variant-filled:focus-within .label {
+  color: var(--color-primary);
+}
+
+.root-variant-filled[data-has-error="true"] {
+  --icon-fill: var(--color-error);
+}
+
+.root-variant-filled[data-has-error="true"] .label {
+  color: var(--color-error);
+}
+
+.root-variant-filled[data-has-error="true"] .bottomBar {
+  background-color: var(--color-error);
+}
+
+.root-variant-filled[data-has-error="true"] .helperText {
+  color: var(--color-error);
+}
+
+.root-variant-filled[data-is-disabled="true"] .textFieldContainer {
+  background-color: rgba(var(--colorbase-on-surface), 0.15);
+}
+
+.root-variant-filled[data-is-disabled="true"]:hover .stateLayer {
+  background-color: transparent;
+}
+
+.root-variant-filled[data-is-disabled="true"]:focus-within .stateLayer {
+  background-color: transparent;
+}
+
+.root-variant-filled[data-is-disabled="true"] .textFieldContainer {
+  pointer-events: none;
+  opacity: 0.38;
+}
+
+.root-variant-filled[data-is-disabled="true"] .helperText {
+  opacity: 0.38;
+}
+
+/* Outlined Variant */
+.root-variant-outlined {
+  --icon-fill: var(--color-on-surface-variant);
+}
+
+.root-variant-outlined .textFieldContainer {
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  /* border: 1px solid var(--color-outline); */
+  transition: border-color 0.2s;
+  background-color: transparent;
+}
+
+/* .root-variant-outlined:focus-within .textFieldContainer {
+  border: 1px solid var(--color-primary);
+} */
+
+.root-variant-outlined .stateLayer {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--color-outline);
+  border-radius: 0.25rem;
+  transition: border-color 0.2s;
+}
+
+.root-variant-outlined .textFieldContainer:hover .stateLayer {
+  border-color: var(--color-on-surface);
+}
+
+.root-variant-outlined:focus-within .stateLayer, 
+.root-variant-outlined:focus-within .textFieldContainer:hover .stateLayer {
+  border-color: var(--color-primary);
+  border-width: 3px;
+}
+
+.root-variant-outlined .inputContainer {
+  background-color: transparent;
+}
+
+.root-variant-outlined .label {
+  color: var(--color-on-surface-variant);
+}
+
+.root-variant-outlined:focus-within .label {
+  color: var(--color-primary);
+}
+
+.root-variant-outlined[data-has-error="true"] {
+  --icon-fill: var(--color-error);
+}
+
+.root-variant-outlined[data-has-error="true"] .stateLayer {
+  border-color: var(--color-error);
+}
+
+.root-variant-outlined[data-has-error="true"]:focus-within .stateLayer,
+.root-variant-outlined[data-has-error="true"]:focus-within .textFieldContainer:hover .stateLayer,
+.root-variant-outlined[data-has-error="true"] .textFieldContainer:hover .stateLayer {
+  border-color: var(--color-error);
+}
+
+.root-variant-outlined[data-has-error="true"] .label {
+  color: var(--color-error);
+}
+
+.root-variant-outlined[data-has-error="true"] .bottomBar {
+  background-color: var(--color-error);
+}
+
+.root-variant-outlined[data-has-error="true"] .helperText {
+  color: var(--color-error);
+}
+
+.root-variant-outlined[data-is-disabled="true"] .textFieldContainer {
+  background-color: rgba(var(--colorbase-on-surface), 0.15);
+}
+
+.root-variant-outlined[data-is-disabled="true"] .textFieldContainer {
+  pointer-events: none;
+  opacity: 0.38;
+}
+
+.root-variant-outlined[data-is-disabled="true"] .helperText {
+  opacity: 0.38;
+}
